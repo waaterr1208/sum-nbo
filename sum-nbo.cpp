@@ -17,6 +17,7 @@ int main(int argc, char* argv[]) {
 		size_t read = fread(&n, 1, sizeof(n), fp);
 		if(read < sizeof(n)){
 			printf("\n %s: 파일이 4바이트보다 작습니다.", argv[i]);
+			fclose(fp);
 			return -1;
 		}
 		
